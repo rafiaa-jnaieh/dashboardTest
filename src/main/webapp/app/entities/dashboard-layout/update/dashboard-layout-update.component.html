@@ -1,0 +1,278 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-dashboard-layout-heading"
+        data-cy="DashboardLayoutCreateUpdateHeading"
+        jhiTranslate="dashboardTestApp.dashboardLayout.home.createOrEditLabel"
+      >
+        Create or edit a Dashboard Layout
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.id" for="field_id">Id</label>
+          <input
+            type="text"
+            class="form-control"
+            name="id"
+            id="field_id"
+            data-cy="id"
+            formControlName="id"
+            [readonly]="editForm.get('id')!.value != null"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.margin" for="field_margin">Margin</label>
+          <input type="number" class="form-control" name="margin" id="field_margin" data-cy="margin" formControlName="margin" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.outerMargin" for="field_outerMargin">Outer Margin</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="outerMargin"
+            id="field_outerMargin"
+            data-cy="outerMargin"
+            formControlName="outerMargin"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.outerMarginTop" for="field_outerMarginTop"
+            >Outer Margin Top</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="outerMarginTop"
+            id="field_outerMarginTop"
+            data-cy="outerMarginTop"
+            formControlName="outerMarginTop"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label
+            class="form-label"
+            jhiTranslate="dashboardTestApp.dashboardLayout.useTransformPositioning"
+            for="field_useTransformPositioning"
+            >Use Transform Positioning</label
+          >
+          <input
+            type="checkbox"
+            class="form-check"
+            name="useTransformPositioning"
+            id="field_useTransformPositioning"
+            data-cy="useTransformPositioning"
+            formControlName="useTransformPositioning"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.mobileBreakpoint" for="field_mobileBreakpoint"
+            >Mobile Breakpoint</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="mobileBreakpoint"
+            id="field_mobileBreakpoint"
+            data-cy="mobileBreakpoint"
+            formControlName="mobileBreakpoint"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.useBodyForBreakpoint" for="field_useBodyForBreakpoint"
+            >Use Body For Breakpoint</label
+          >
+          <input
+            type="checkbox"
+            class="form-check"
+            name="useBodyForBreakpoint"
+            id="field_useBodyForBreakpoint"
+            data-cy="useBodyForBreakpoint"
+            formControlName="useBodyForBreakpoint"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.minCols" for="field_minCols">Min Cols</label>
+          <input type="number" class="form-control" name="minCols" id="field_minCols" data-cy="minCols" formControlName="minCols" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.maxCols" for="field_maxCols">Max Cols</label>
+          <input type="number" class="form-control" name="maxCols" id="field_maxCols" data-cy="maxCols" formControlName="maxCols" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.minRows" for="field_minRows">Min Rows</label>
+          <input type="number" class="form-control" name="minRows" id="field_minRows" data-cy="minRows" formControlName="minRows" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.maxRows" for="field_maxRows">Max Rows</label>
+          <input type="number" class="form-control" name="maxRows" id="field_maxRows" data-cy="maxRows" formControlName="maxRows" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.maxItemCols" for="field_maxItemCols"
+            >Max Item Cols</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="maxItemCols"
+            id="field_maxItemCols"
+            data-cy="maxItemCols"
+            formControlName="maxItemCols"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.minItemCols" for="field_minItemCols"
+            >Min Item Cols</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="minItemCols"
+            id="field_minItemCols"
+            data-cy="minItemCols"
+            formControlName="minItemCols"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.maxItemRows" for="field_maxItemRows"
+            >Max Item Rows</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="maxItemRows"
+            id="field_maxItemRows"
+            data-cy="maxItemRows"
+            formControlName="maxItemRows"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.minItemRows" for="field_minItemRows"
+            >Min Item Rows</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="minItemRows"
+            id="field_minItemRows"
+            data-cy="minItemRows"
+            formControlName="minItemRows"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.maxItemArea" for="field_maxItemArea"
+            >Max Item Area</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="maxItemArea"
+            id="field_maxItemArea"
+            data-cy="maxItemArea"
+            formControlName="maxItemArea"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.minItemArea" for="field_minItemArea"
+            >Min Item Area</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="minItemArea"
+            id="field_minItemArea"
+            data-cy="minItemArea"
+            formControlName="minItemArea"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.defaultItemCols" for="field_defaultItemCols"
+            >Default Item Cols</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="defaultItemCols"
+            id="field_defaultItemCols"
+            data-cy="defaultItemCols"
+            formControlName="defaultItemCols"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.defaultItemRows" for="field_defaultItemRows"
+            >Default Item Rows</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="defaultItemRows"
+            id="field_defaultItemRows"
+            data-cy="defaultItemRows"
+            formControlName="defaultItemRows"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.ignoreMarginInRow" for="field_ignoreMarginInRow"
+            >Ignore Margin In Row</label
+          >
+          <input
+            type="checkbox"
+            class="form-check"
+            name="ignoreMarginInRow"
+            id="field_ignoreMarginInRow"
+            data-cy="ignoreMarginInRow"
+            formControlName="ignoreMarginInRow"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.draggable" for="field_draggable">Draggable</label>
+          <input type="checkbox" class="form-check" name="draggable" id="field_draggable" data-cy="draggable" formControlName="draggable" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="dashboardTestApp.dashboardLayout.resizable" for="field_resizable">Resizable</label>
+          <input type="checkbox" class="form-check" name="resizable" id="field_resizable" data-cy="resizable" formControlName="resizable" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
