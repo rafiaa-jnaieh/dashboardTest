@@ -1,0 +1,111 @@
+{
+  "applications": "*",
+  "changelogDate": "20220601201803",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "dashboard_layout",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "margin",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "outerMargin",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "outerMarginTop",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "useTransformPositioning",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "mobileBreakpoint",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "useBodyForBreakpoint",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "minCols",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "maxCols",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "minRows",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "maxRows",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "maxItemCols",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "minItemCols",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "maxItemRows",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "minItemRows",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "maxItemArea",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "minItemArea",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "defaultItemCols",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "defaultItemRows",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "ignoreMarginInRow",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "draggable",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "resizable",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "DashboardLayout",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "dashboard",
+      "otherEntityRelationshipName": "dashboardLayout",
+      "relationshipName": "dashboard",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

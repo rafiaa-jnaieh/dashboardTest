@@ -1,0 +1,114 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="dashboardLayout">
+      <h2 data-cy="dashboardLayoutDetailsHeading">
+        <span jhiTranslate="dashboardTestApp.dashboardLayout.detail.title">Dashboard Layout</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.id">Id</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.margin">Margin</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.margin }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.outerMargin">Outer Margin</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.outerMargin }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.outerMarginTop">Outer Margin Top</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.outerMarginTop }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.useTransformPositioning">Use Transform Positioning</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.useTransformPositioning }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.mobileBreakpoint">Mobile Breakpoint</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.mobileBreakpoint }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.useBodyForBreakpoint">Use Body For Breakpoint</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.useBodyForBreakpoint }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.minCols">Min Cols</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.minCols }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.maxCols">Max Cols</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.maxCols }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.minRows">Min Rows</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.minRows }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.maxRows">Max Rows</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.maxRows }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.maxItemCols">Max Item Cols</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.maxItemCols }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.minItemCols">Min Item Cols</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.minItemCols }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.maxItemRows">Max Item Rows</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.maxItemRows }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.minItemRows">Min Item Rows</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.minItemRows }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.maxItemArea">Max Item Area</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.maxItemArea }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.minItemArea">Min Item Area</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.minItemArea }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.defaultItemCols">Default Item Cols</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.defaultItemCols }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.defaultItemRows">Default Item Rows</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.defaultItemRows }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.ignoreMarginInRow">Ignore Margin In Row</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.ignoreMarginInRow }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.draggable">Draggable</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.draggable }}</span>
+        </dd>
+        <dt><span jhiTranslate="dashboardTestApp.dashboardLayout.resizable">Resizable</span></dt>
+        <dd>
+          <span>{{ dashboardLayout.resizable }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/dashboard-layout', dashboardLayout.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
