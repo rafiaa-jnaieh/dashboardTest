@@ -1,0 +1,69 @@
+
+entity UserProfile {
+	id String
+	name String
+    priority Integer
+    
+}
+entity Dashboard {
+	id String
+}
+
+entity DashboardLayout {
+	id String
+	  margin Integer
+      outerMargin Boolean
+      outerMarginTop Integer
+      useTransformPositioning Boolean
+      mobileBreakpoint Integer
+      useBodyForBreakpoint Boolean
+      minCols Integer 
+      maxCols Integer 
+      minRows Integer
+      maxRows Integer
+      maxItemCols Integer
+      minItemCols Integer
+      maxItemRows Integer
+      minItemRows Integer
+      maxItemArea Integer
+      minItemArea Integer
+      defaultItemCols Integer
+      defaultItemRows Integer
+      ignoreMarginInRow Boolean
+      draggable Boolean
+      resizable Boolean
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity DashboardItem {
+	id String
+    cols Integer
+    rows Integer
+    x Integer
+	y Integer,
+	content String,
+}
+
+
+// defining multiple OneToMany relationships with comments
+
+
+relationship OneToMany {
+     Dashboard to DashboardItem
+}
+relationship ManyToOne {
+	Dashboard to DashboardLayout
+    Dashboard to UserProfile
+    
+}
+// Set pagination options
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
